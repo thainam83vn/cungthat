@@ -1,0 +1,20 @@
+.manhinh{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.manhinh >div.left{
+    width: calc(50% - 222px);
+    height: 100%;
+    
+}
+.manhinh >div.middle{
+    width: 444px;
+    height: 100%;
+    
+}
+.manhinh >div.right{
+    width: calc(50% - 222px);
+    height: 100%;
+}

@@ -3,3 +3,44 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+ul{
+  list-style: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  padding:10px;
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  /*grid-template-columns: repeat(auto-fill, minmax(200px 1fr));*/
+  grid-gap: 20px;
+}
+
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.cards .li {
+  flex: 1 1 200px;
+}
+
+.cards .h2 {
+  margin: 0;
+  padding: 10px;
+}
+
+.cards .p {
+  padding: 10px;
+}
+
+.cards .card img {
+}
