@@ -1,8 +1,8 @@
 import React from 'react';
 import './screen.css';
 import { List } from './list';
+import env from './env';
 
-const CAUSIEU = "http://localhost:81";
 
 export class Screen extends React.Component {
     addZero(v, num){
@@ -23,7 +23,7 @@ export class Screen extends React.Component {
             screen: arr[2],
             date: today
         }
-        fetch(`${CAUSIEU}/files/${today}/${arr[2]}`)
+        fetch(`${env.CAUSIEU}/files/${today}/${arr[2]}`)
             .then(res => res.json())
             .then(res => {
                 console.log("Manhinh", res);
