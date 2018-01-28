@@ -5,10 +5,19 @@ import { List } from './list';
 const CAUSIEU = "http://localhost:81";
 
 export class Screen extends React.Component {
+    addZero(v, num){
+        let s = v + "";
+        while(s.length < num){
+            s = "0" + s;
+        }
+        return s;
+    }
     constructor(props) {
         super(props);
         let arr = this.props.history.location.pathname.split('/');
-        let today = "180128";
+        let d = new Date();
+        let today = `${d.getFullYear()%2000}${this.addZero(d.getMonth() + 1, 2)}${this.addZero(d.getDate(),2)}`
+        console.log("today:", today);
         this.state = {
             files: null, left: null, right: null,
             screen: arr[2],
